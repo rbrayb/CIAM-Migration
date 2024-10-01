@@ -44,7 +44,7 @@ namespace readUser
                 + " Phone number " + phoneNumber + " Display name " + displayName + " Given name " + givenName + " Surname " + surName);
 
             // TODO: Add Entra External IDP tenant ID
-            var tenantId = "7fb7fef0-997a-4b11-a6e6-2c1de3d4b3bb";
+            var tenantId = "your secret ";
 
             if (method == "auth")
             {
@@ -53,14 +53,14 @@ namespace readUser
                 using (var httpClient = new HttpClient())
                 {
                     // Build the request URL
-                    //var requestUrl = "https://azureidextid.ciamlogin.com/7fb7fef0-997a-4b11-a6e6-2c1de3d4b3bb/oauth2/token";
+                    //var requestUrl = "https://eeidtenant.ciamlogin.com/eeidobjectId/oauth2/token";
 
                     // TODO: Add Entra External IDP tenant name and ID
-                    var requestUrl = "https://AzureIDExtID.ciamlogin.com/7fb7fef0-997a-4b11-a6e6-2c1de3d4b3bb/oauth2/v2.0/token";
+                    var requestUrl = "https://eeidtenant.ciamlogin.com/eeidobjectId/oauth2/v2.0/token";
                     //string auth_resource = "https://graph.microsoft.com"; // Replace with your specific resource URL
                     string scope = "https://graph.microsoft.com/.default";
                     // TODO: Add RopcFromB2C client ID
-                    string auth_clientId = "32572189-bd4c-4ddd-bc1a-dc343ea1256e";
+                    string auth_clientId = "your clientID ";
 
                     // Prepare the request body
                     //var auth_requestBody = $"resource={auth_resource}&client_id={auth_clientId}&grant_type=password&username={email}&password={password}&nca=1";
@@ -96,8 +96,8 @@ namespace readUser
                 // Values from app registration  
 
                 // TODO: Add GraphCallsFromB2CTenant client ID and secret
-                var clientId = "a8f0bacd-132d-4fb8-96d1-b284e563fc8d";
-                var clientSecret = "LPZ8Q~z6deVq1Tik.i_K3IiofdqTXArZUi6rRbdk";
+                var clientId = "your clientID";
+                var clientSecret = "your client secret";
 
                 // using Azure.Identity;  
                 var options = new TokenCredentialOptions
