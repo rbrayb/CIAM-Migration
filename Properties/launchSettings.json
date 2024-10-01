@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CIAM_migration": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7257 --worker-runtime dotnet"
+    }
+  },
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+  }
+}
