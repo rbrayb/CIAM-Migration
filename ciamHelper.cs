@@ -44,7 +44,7 @@ namespace readUser
                 + " Phone number " + phoneNumber + " Display name " + displayName + " Given name " + givenName + " Surname " + surName);
 
             // TODO: Add Entra External IDP tenant ID
-            var tenantId = "your secret ";
+            var tenantId = "";
 
             if (method == "auth")
             {
@@ -53,14 +53,14 @@ namespace readUser
                 using (var httpClient = new HttpClient())
                 {
                     // Build the request URL
-                    //var requestUrl = "https://eeidtenant.ciamlogin.com/eeidobjectId/oauth2/token";
+                    //var requestUrl = "https://tenant.ciamlogin.com/tenantobjectid/oauth2/token";
 
                     // TODO: Add Entra External IDP tenant name and ID
-                    var requestUrl = "https://eeidtenant.ciamlogin.com/eeidobjectId/oauth2/v2.0/token";
+                    var requestUrl = "https://tenant.ciamlogin.com/tenantobjectid/oauth2/v2.0/token";
                     //string auth_resource = "https://graph.microsoft.com"; // Replace with your specific resource URL
                     string scope = "https://graph.microsoft.com/.default";
                     // TODO: Add RopcFromB2C client ID
-                    string auth_clientId = "your clientID ";
+                    string auth_clientId = "";
 
                     // Prepare the request body
                     //var auth_requestBody = $"resource={auth_resource}&client_id={auth_clientId}&grant_type=password&username={email}&password={password}&nca=1";
@@ -96,8 +96,8 @@ namespace readUser
                 // Values from app registration  
 
                 // TODO: Add GraphCallsFromB2CTenant client ID and secret
-                var clientId = "your clientID";
-                var clientSecret = "your client secret";
+                var clientId = "";
+                var clientSecret = "";
 
                 // using Azure.Identity;  
                 var options = new TokenCredentialOptions
@@ -165,7 +165,7 @@ namespace readUser
                         {
                             SignInType = "emailAddress",
                             // TODO: Add Entra External IDP tenant name
-                            Issuer = "azureidextid.onmicrosoft.com",
+                            Issuer = "tenant.onmicrosoft.com",
                             IssuerAssignedId = email,
                         }
                     },
